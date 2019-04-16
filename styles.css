@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('./kings-landing.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -24,4 +26,57 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.dragon-flying{
+  width: 300px;
+  height: 250px;
+  position: center;  
+}
+
+.animated {
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top:900px;
+  margin-bottom:40px;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInLeft {
+  0% {
+     opacity: 0;
+     -webkit-transform: translateX(0px);
+  }
+  60% {
+     opacity: 1;
+     -webkit-transform: translateX(10px);
+  }
+  80% {
+     -webkit-transform: translateX(-30px);
+  }
+  100% {
+     -webkit-transform: translateX(2000px);
+  }
+}
+
+@keyframes bounceInLeft {
+  0% {
+     transform: translateX(0px);
+  }
+  60% {
+     transform: translateX(10px);
+  }
+  80% {
+     transform: translateX(-30px);
+  }
+  100% {
+     transform: translateX(2000px);
+  }
+}
+
+.bounceInRight {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
 }

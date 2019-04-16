@@ -21,11 +21,17 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName]; //window['BlinkyDancer']
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction( //added keyword new to refactor to pseudoclassical style
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+    // var dancer = new dancerMakerFunction( 
+    //   $("body").height() * Math.random(),
+    //   $("body").width() * Math.random(),
+    //   Math.random() * 1000
+    // );
+
+    var dancer = new dancerMakerFunction( 
+      1000,
+      1000,
     );
+
     $('body').append(dancer.$node);
   });
 });
